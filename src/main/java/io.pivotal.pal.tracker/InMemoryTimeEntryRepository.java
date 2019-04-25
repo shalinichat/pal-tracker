@@ -7,11 +7,11 @@ import java.util.List;
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     private HashMap<Long, TimeEntry> timeEntries = new HashMap<>();
 
-    private long currentIds = 1L;
+    private long currentId = 1L;
 
     @Override
     public TimeEntry create(TimeEntry timeEntry) {
-        Long id = currentIds++;
+        Long id = currentId++;
 
         TimeEntry newTimeEntry = new TimeEntry(
                 id,
