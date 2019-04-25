@@ -1,9 +1,8 @@
 ---
 applications:
-- name: pal-tracker-shalini
+- name: pal-tracker-shalu
   path: build/libs/pal-tracker.jar
-  routes:
-    - route: pal-tracker-shalini.apps.dev.pcf-aws.com
+  random-route: true
   env:
     WELCOME_MESSAGE: Hello from the review environment
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
